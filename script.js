@@ -7,7 +7,7 @@ const heroSection = document.getElementById("hero");
 async function fetchNews(query = '') {
     try {
         const apiurl = query 
-            ? `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&pageSize=100&apiKey=${apikey}`
+            ? `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&pageSize=10&apiKey=${apikey}`
             : `https://newsapi.org/v2/top-headlines?country=us&pageSize=10&apiKey=${apikey}`;
         const response = await fetch(apiurl);
         const data = await response.json();
